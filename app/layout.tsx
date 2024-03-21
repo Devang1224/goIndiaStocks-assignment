@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SidePannel from "@/components/SidePannel";
+import NavBtn from "@/components/ui/NavBtn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <div className="h-screen xl:flex">
+         <SidePannel/>
+         <div className="flex items-center text-white xl:hidden bg-[#193279]">
+          <NavBtn type="discussion"/>
+          <NavBtn type="market"/>
+         </div>
+
+         {children}
+      </div>
+      </body>
     </html>
   );
 }
