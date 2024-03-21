@@ -19,13 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className="h-screen xl:flex">
+      <div className="h-screen xl:flex relative">
          <SidePannel/>
+
          <div className="flex items-center text-white xl:hidden bg-[#193279]">
           <NavBtn type="discussion"/>
           <NavBtn type="market"/>
          </div>
-
          {children}
       </div>
       </body>

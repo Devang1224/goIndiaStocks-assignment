@@ -37,7 +37,7 @@ export default function SidePannel() {
 
 
   return (
-    <div className={`flex items-center absolute h-full transition-all duration-300 ease-in-out  ${drawerState?"ml-0 ":"ml-[-250px]"} xl:static`}>
+    <div className={`flex items-center fixed xl:absolute h-full transition-all duration-300 ease-in-out  ${drawerState?"ml-0 ":"ml-[-250px]"} xl:static`}>
         
           <div className="h-full w-[250px]  bg-[#193279]">
              <div className='px-4 py-6 flex items-center justify-between border border-x-0 border-t-0'>
